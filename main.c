@@ -8,7 +8,7 @@ struct node {
 
 void addnode(struct node **baslangic, int data) {  
     struct node *local = (struct node*)malloc(sizeof(struct node));
-    local->data = data;  // 'dats' hatalı, 'data' olmalı
+    local->data = data;
     local->next = *baslangic;
     *baslangic = local;
 }
@@ -35,7 +35,7 @@ void group(struct node **baslangic, int max_tekrar) {
                 }
                 previous = newNode;
             }
-            counter++;  // 'sayac' hatalı, 'counter' olmalı
+            counter++;
             next = next->next;
         }
         gezer = next;
@@ -50,10 +50,10 @@ void print(struct node *baslangic) {
     struct node *gezer = baslangic;
     printf("{");
     while (gezer != NULL) {
-        printf("%d", gezer->data);  // '%d' yerine "%d" olmalı
+        printf("%d", gezer->data); 
         gezer = gezer->next;
         if (gezer != NULL) {
-            printf(", ");  // Liste elemanları arasında virgül koymak için
+            printf(", ");  
         }
     }
     printf("}\n");
